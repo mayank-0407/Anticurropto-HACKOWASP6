@@ -1,0 +1,118 @@
+[
+	{
+		"color": "Vbn",
+		"id": "clvbya1ex0004yemltutap726",
+		"make": "asdf",
+		"model": "dfghj",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "qwedr",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 1234
+	},
+	{
+		"color": "Ksiw",
+		"id": "clvfgks3e0001vum201twsazd",
+		"make": "Djui",
+		"model": "Uei88",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "Jsisi",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 1323
+	},
+	{
+		"color": "blak",
+		"id": "clvfgks3v0004vum29gef7ev4",
+		"make": "sh",
+		"model": "sjh",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "1324",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 154
+	},
+	{
+		"color": "White",
+		"id": "clvfgks3v0005vum2htkjklmd",
+		"make": "2019",
+		"model": "Lxi",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "928jj9",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 4643
+	},
+	{
+		"color": "All",
+		"id": "clvym3aur0003mabqlmv214dm",
+		"make": "Hs88",
+		"model": "Kwi",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "Jassu",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 119
+	},
+	{
+		"color": "Nssk",
+		"id": "clvyn1d470005mabq4b7v100x",
+		"make": "U3ei",
+		"model": "Jeie8",
+		"ownerId": "clvb57hq400006i2lagezy3kj",
+		"plateNumber": "Pata ni",
+		"pollutionDone": null,
+		"pollutionExpiration": null,
+		"year": 43464
+	},
+
+
+
+
+
+  
+	{
+		"fine": "2000",
+		"id": "clvzotzzd00055yujqsi0z0kq",
+		"issueDate": "2024-05-09T20:15:24.987Z",
+		"location": "State: Himachal Pradesh, City: Sundarnagar, Latitude: 30.3664578, Longitude: 76.3624289",
+		"officerId": null,
+		"reason": "Drink n drive",
+		"status": false,
+		"userId": null,
+		"vehicleId": "clvbya1ex0004yemltutap726"
+	},
+	{
+		"fine": "4000",
+		"id": "clw04xnq800075yuj1w0i1dcm",
+		"issueDate": "2024-05-10T03:46:09.629Z",
+		"location": "State: Punjab, City: Bathinda, Latitude: 30.3664975, Longitude: 76.3624309",
+		"officerId": null,
+		"reason": "Red light cross",
+		"status": false,
+		"userId": null,
+		"vehicleId": "clvbya1ex0004yemltutap726"
+	},
+	{
+		"fine": "9878",
+		"id": "clw12ujca00095yujcs0lqmxn",
+		"issueDate": "2024-05-10T19:35:30.859Z",
+		"location": "State: Tripura, City: Udaipur, Latitude: 30.3664899, Longitude: 76.3624145",
+		"officerId": null,
+		"reason": "Bado badi",
+		"status": false,
+		"userId": null,
+		"vehicleId": "clvym3aur0003mabqlmv214dm"
+	},
+	{
+		"fine": "277",
+		"id": "clw137zsx0001mpfjkt57lw52",
+		"issueDate": "2024-05-10T19:45:58.781Z",
+		"location": "State: Rajasthan, City: Sikar, Latitude: 30.3664899, Longitude: 76.3624145",
+		"officerId": null,
+		"reason": "Sus",
+		"status": false,
+		"userId": null,
+		"vehicleId": "clvym3aur0003mabqlmv214dm"
+	}
+]

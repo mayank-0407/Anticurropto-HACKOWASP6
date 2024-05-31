@@ -10,4 +10,7 @@ npx hardhat test
 REPORT_GAS=true npx hardhat test
 npx hardhat node
 npx hardhat run scripts/deploy.js
+
+Add conract address and abi file in constants in frontend
+
 ```

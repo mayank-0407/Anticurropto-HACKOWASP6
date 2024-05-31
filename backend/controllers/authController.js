@@ -229,9 +229,9 @@ const getUserDetails = async (req, res) => {
 		if(thisUser)
 			return res.status(200).send(thisUser);
 		else
-			return res.status(203).json({ msg: "No user found", details: e.message });
+			return res.status(500).json({ error: "No user found", details: e.message });
 	} catch (e) {
-		return res.status(203).json({ msg: "Session Expired", details: e.message });
+		return res.status(500).json({ error: "Session Expired", details: e.message });
 	}
 };
 

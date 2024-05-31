@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "postgresql"
-  url      = "postgresql://postgres:123@localhost:5432/land?schema=public"
+  url      = "postgresql://postgres:123@localhost:5432/capstone?schema=public"
 }
 
 model User {
@@ -24,6 +24,8 @@ model User {
   updatedAt          DateTime            @updatedAt
   sessions           Session[]
   verificationTokens VerificationToken[]
+  vehicles           Vehicle[]
+  challans           Challan[]
   ownedLands         Land[]              @relation("LandOwner")
   transferredLands   TransferLand[]      @relation("PrevOwner")
   acquiredLands      TransferLand[]      @relation("CurrentOwner")
@@ -45,6 +47,55 @@ model VerificationToken {
   user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([identifier, token])
+}
+
+model Vehicle {
+  id                  String     @id @default(cuid())
+  plateNumber         String     @unique
+  make                String
+  model               String
+  year                Int
+  color               String
+  insurance           Insurance?
+  challans            Challan[]
+  repairs             Repair[]
+  owner               User?      @relation(fields: [ownerId], references: [id])
+  ownerId             String?
+  pollutionDone       DateTime?
+  pollutionExpiration DateTime?
+}
+
+model Insurance {
+  id           String   @id @default(cuid())
+  policyNumber String   @unique
+  startDate    DateTime
+  endDate      DateTime
+  provider     String
+  vehicle      Vehicle? @relation(fields: [vehicleId], references: [id])
+  vehicleId    String   @unique
+}
+
+model Challan {
+  id        String   @id @default(cuid())
+  issueDate DateTime @default(now())
+  fine      String
+  reason    String
+  status    Boolean  @default(false)
+  vehicle   Vehicle  @relation(fields: [vehicleId], references: [id])
+  vehicleId String
+  user      User?    @relation(fields: [userId], references: [id])
+  userId    String?
+  location  String
+  officerId String?
+}
+
+model Repair {
+  id          String   @id @default(cuid())
+  repairDate  DateTime
+  description String
+  cost        Float
+  vehicle     Vehicle  @relation(fields: [vehicleId], references: [id])
+  vehicleId   String
 }
 
 model Land {

@@ -12,15 +12,14 @@ services:
   #     - 5555:5555
   #   environment:
   #     - DATABASE_URL="postgresql://postgres:123@db:5432/capstone?schema=public"
-
   db:
-    container_name: postgres_db
+    container_name: db
     image: postgres:15
     restart: always
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: 123
-      POSTGRES_DB: land
+      POSTGRES_DB: capstone
     ports:
       - 5432:5432
     volumes:

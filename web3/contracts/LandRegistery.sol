@@ -57,7 +57,7 @@ contract LandRegistery {
         string memory _dimensionOfLand,
         string memory _landIdentificationNumber,
         LandType _landType
-    ) external onlyOwner {
+    ) external {
         landCount++;
         uint256 landId = parseAndConvert(_landIdentificationNumber);
         Land memory newLand = Land({

@@ -1,11 +1,11 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API_URL = "http://localhost:3000/land";
+const API_URL = 'http://localhost:3000/land';
 
 export const getUserLands = async (userId) => {
   try {
     const response = await axios.get(`${API_URL}/${userId}`);
-    console.log("In api   :    ",response);
+    console.log('In api   :    ', response);
     return response.data;
   } catch (error) {
     throw error;
@@ -13,12 +13,12 @@ export const getUserLands = async (userId) => {
 };
 
 export const getOneLand = async (landId) => {
-  if(true) {
-    console.log("api get one landddd : ",landId.id);
+  if (true) {
+    console.log('api get one landddd : ', landId.id);
     const response = await axios.get(`${API_URL}/land/${landId.id}`);
-    console.log("trans in land api : ",response);
+    console.log('trans in land api : ', response);
     return response;
-  } 
+  }
   // catch (error) {
   //   throw error;
   // }
@@ -36,10 +36,7 @@ export const addLand = async (land) => {
 
 export const updateLand = async (userId, LandId, land) => {
   try {
-    const response = await axios.post(
-      `${API_URL}/${userId}/${vehicleId}`,
-      vehicle
-    );
+    const response = await axios.post(`${API_URL}/${userId}/${vehicleId}`, vehicle);
     return response.data;
   } catch (error) {
     throw error;

@@ -1,11 +1,11 @@
 const main = async () => {
-  const landFactory = await hre.ethers.getContractFactory(
+  const vehicleFactory = await hre.ethers.getContractFactory(
     "LandRegistery"
   );
-  const landContract = await landFactory.deploy();
+  const vehicleContract = await vehicleFactory.deploy();
 
-  await landContract.waitForDeployment();
-    const myAddress = await landContract.getAddress();
+  await vehicleContract.waitForDeployment();
+    const myAddress = await vehicleContract.getAddress();
   console.log("Transactions address: ",myAddress);
 };
 

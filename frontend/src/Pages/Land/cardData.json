@@ -1,0 +1,54 @@
+{
+  "lands": [
+    {
+      "owner": "Singla Traders",
+      "name": "Land 1",
+      "phone": "1234567890",
+      "type": "Commercial",
+      "area": "250 Gaj",
+      "location": "Navi Mumbai",
+      "currentRate": 2000000,
+      "imageUrl": "https://images.unsplash.com/photo-1516156008625-3a9d6067fab5?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "owner": "Mayank",
+      "name": "Land 2",
+      "phone": "1234567890",
+      "type": "Residential",
+      "area": "500 Gaj",
+      "location": "Purani Mumbai",
+      "currentRate": 3000000,
+      "imageUrl": "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "owner": "Yuvraj",
+      "name": "Land 3",
+      "phone": "1234567890",
+      "type": "Industrial",
+      "area": "1000 Gaj",
+      "location": "Patiala",
+      "currentRate": 4000000,
+      "imageUrl": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "owner": "Aggarwal Properties",
+      "name": "Land 4",
+      "phone": "1234567890",
+      "type": "Industrial",
+      "area": "5000 Gaj",
+      "location": "Kerela",
+      "currentRate": 5000000,
+      "imageUrl": "https://images.unsplash.com/photo-1605146769289-440113cc3d00?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "owner": "Vshave",
+      "name": "Land 5",
+      "phone": "1234567890",
+      "type": "Agricultural",
+      "area": "100 Gaj",
+      "location": "Bihar",
+      "currentRate": 6000000,
+      "imageUrl": "https://images.unsplash.com/photo-1591389703635-e15a07b842d7?q=80&w=2833&"
+    }
+  ]
+}

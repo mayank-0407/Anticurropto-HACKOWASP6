@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 
-import { landABI, landAddress } from "../utils/Web3/constants";
+import { landABI, landAddress } from "../Utils/ethers/constants";
 
 export const LandContext = React.createContext();
 
@@ -18,6 +18,7 @@ const LandProvider = ({ children }) => {
     status: "",
     landType: "",
   });
+  
   const [currentAccount, setCurrentAccount] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [LandCount, setLandCount] = useState(localStorage.getItem("LandCount"));
@@ -49,7 +50,7 @@ const LandProvider = ({ children }) => {
           currentOwner: transaction.currentOwner,
         }));
 
-        // console.log("All Transactions : ", structuredTransactions);
+        console.log("All Transactions : ", structuredTransactions);
         // console.log("In get All Transaction");
         setTransactions(structuredTransactions);
       } else {
@@ -114,7 +115,7 @@ const LandProvider = ({ children }) => {
 
   const addLandToBlockchain = async (formData) => {
     // console.log("in backend", formData);
-    if (true) {
+    try {
       if (window.ethereum) {
         const {
           location,
@@ -123,7 +124,7 @@ const LandProvider = ({ children }) => {
           landIdentificationNumber,
           landType,
         } = formData;
-
+        
         const provider = new ethers.BrowserProvider(window.ethereum);
         const signer = await provider.getSigner();
         const landContract = new ethers.Contract(landAddress, landABI, signer);
@@ -139,14 +140,15 @@ const LandProvider = ({ children }) => {
         await transactionHash.wait();
         console.log(`Success - ${transactionHash.hash}`);
         setIsLoading(false);
+        return transactionHash.hash;
       } else {
         console.log("No ethereum object");
       }
     }
-    // catch (error) {
-    //   console.log(error);
-    //   throw new Error("Error In Adding Land");
-    // }
+    catch (error) {
+      console.log(error);
+      throw new Error("Error In Adding Land");
+    }
   };
 
   const transferLandfunc = async (formData) => {
