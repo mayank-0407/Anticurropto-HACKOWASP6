@@ -30,31 +30,53 @@ Used Polygon/Sepolia Ethereum Blockchain for testing and deploying solidity smar
 - Now copy the transaction address and paste it frontend/src/utils/web3/constants.js
 - Now you are all set to open the URL in the browser with web3 wallet  ( http://localhost:5173/ )
 
-# OR
+### OR
 
 # Steps to Run Project Manually
-# Frontend:
+## Frontend:
 - cd frontend
 - npm i
 - npm run dev
 
-# Database:
+## Database:
 - cd backend
 - docker compose up
 
-# Backend:
+## Backend:
 - cd backend
 - npm i
 - npx prisma migrate dev
 - npx prisma generate
 - nodemon
 
-# ML model python app:
+## ML model python app:
 - cd mlapi
 - pip install -r requirements.txt
 - python app.py
 
-# web3:
+## web3:
 - cd web3
 - npm I
 - npx hardhat run scripts/deploy.js --network polygonAmoy/sepolia
+
+# Start Contribution
+### Update existing branch
+```
+git checkout main
+git pull origin main
+```
+### Create a new branch
+```
+git checkout -b feature/my-feature
+```
+### Make desired changes in code
+### Commit changes
+```
+git add .
+git commit -m "Add feature XYZ"
+```
+### Pushing changes
+```
+git push -u origin feature/my-feature
+```
+### Now review the changes and you are all set to make your Pull Request 🥳
